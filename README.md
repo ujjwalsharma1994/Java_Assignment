@@ -1,4 +1,6 @@
 # Java_Assignment
+**NOTE**
+    At the time of user creation a JWT string will get generated which will be passed further in tweet creation, reading and deleting requests
 
 Task 1: **CREATE A User**
 
@@ -21,7 +23,7 @@ Response from Server
         "statusCode": 200,
         "message": "User created successfully",
         "output": {
-            "JWT_Token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YXJ1bjEyMzQiLCJzY29wZXMiOlt7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sImlzcyI6IlVqandhbCBTaGFybWEiLCJpYXQiOjE2NDQ5ODk3OTQsImV4cCI6MTY0NTAyNTc5NH0.PL_HTNOGvJNNt2e9t7uqMwhDuUOavYUSWniQDzppi6s",
+            "**JWT_Token**": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YXJ1bjEyMzQiLCJzY29wZXMiOlt7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifV0sImlzcyI6IlVqandhbCBTaGFybWEiLCJpYXQiOjE2NDQ5ODk3OTQsImV4cCI6MTY0NTAyNTc5NH0.PL_HTNOGvJNNt2e9t7uqMwhDuUOavYUSWniQDzppi6s",
             "user_id": 33,
             "created_timestamp": "Wednesday,February 16,2022 11:06,AM"
         },
@@ -66,8 +68,8 @@ Task 2: **Create, Read and Delete Tweets**
                         },
                         "success": true
                     }
-                    
-                    { // in case data exist
+        ----------------------------------------In Case Data Exist-------------------------------------------
+                    {
                         "statusCode": 200,
                         "message": "Tweet(s) fetched successfully.",
                         "output": {
