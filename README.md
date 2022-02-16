@@ -54,7 +54,8 @@ Task 2: **Create, Read and Delete Tweets**
     
         **HTTP GET request**
         URL: http://localhost:8080/tweets/fetch?username=varun1234&date=1644819748447
-        
+        Authorization: **Bearer Token** : pass the token that got generated when user was created
+
         **Server Response**
         
                     { // in case user has not posted any tweet
@@ -83,3 +84,33 @@ Task 2: **Create, Read and Delete Tweets**
                         "success": true
                     }
     
+    3. Delete All Tweets By Username
+    
+    **HTTP Delete Request**
+    URL: http://localhost:8080/tweets/delete?username=varun1234
+    Authorization: **Bearer Token** : pass the token that got generated when user was created
+    
+    **Server Response**
+                    {
+                        "statusCode": 200,
+                        "message": "Tweet(s) deleted successfully.",
+                        "output": {
+                            "Number of tweet(s) deleted": 1,
+                            "Tweet(s) list": [
+                                {
+                                    "tweetId": 2,
+                                    "userId": 1,
+                                    "timeStamp": 1644995834184,
+                                    "tweet": "the moment is critical...."
+                                }
+                            ]
+                        },
+                        "success": true
+                    }
+                   ----------------------------------In Case Username Do Not Exist---------------------------------------- 
+                    {
+                        "statusCode": 404,
+                        "message": "varun12344 does not exist in our system.",
+                        "output": "No data found.",
+                        "success": false
+                    }
